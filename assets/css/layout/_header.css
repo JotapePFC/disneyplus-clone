@@ -3,6 +3,7 @@
     position: fixed;
     transition: background-color 0.3s ease-in-out;
     width: 100%;
+    z-index: 10;
 }
 
 .header__navigation {
