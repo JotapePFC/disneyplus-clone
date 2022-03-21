@@ -3,6 +3,7 @@
     display: flex;
     overflow: hidden;
     padding-top: 9.7rem;
+    position: relative;
 }
 
 .banner-slider {
@@ -14,7 +15,7 @@
     flex-shrink: 0;
     padding: 0 1rem 3rem;
     position: relative;
-    width: 90vw;
+    width: 91vw;
 }
 
 .banner-slider__link {
@@ -78,11 +79,11 @@
     .banners {
         padding-top: 8.2rem;
     }
-    
+
     .banner-slider__item {
         width: 85vw;
     }
-    
+
     .banners .arrow-slider__left {
         left: 1rem;
     }

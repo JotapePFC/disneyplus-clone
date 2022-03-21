@@ -20,7 +20,7 @@ function translateSlide(position) {
 
 function getCenterPosition(index) {
     const slide = sliderItems[index]
-    const margin = (window.innerWidth - slide.offsetWidth) / 2
+    const margin = (document.body.clientWidth - slide.offsetWidth) / 2
     const centerPosition = margin - (slide.offsetWidth * index)
     return centerPosition
 }
@@ -115,7 +115,7 @@ function onMouseLeave(event) {
     slide.removeEventListener('mousemove', onMouseMove)
 }
 
-function onToushStart(event, index) {
+function onTouchStart(event, index) {
     const slide = event.currentTarget
     slide.addEventListener('touchmove', onTouchMove)
     event.clientX = event.touches[0].clientX
@@ -140,11 +140,11 @@ function onResizeWindow() {
 function setListeners() {
     btnNext.addEventListener('click', forwardSlide)
     btnPrevious.addEventListener('click', backwardSlide)
-    sliderItems.forEach(function(slide, index) {
+    sliderItems.forEach(function (slide, index) {
         const link = slide.querySelector('.banner-slider__link')
         link.addEventListener('click', preventDefault)
         slide.addEventListener('dragstart', preventDefault)
-        slide.addEventListener('mousedown', function(event) {
+        slide.addEventListener('mousedown', function (event) {
             onMouseDown(event, index)
         })
         slide.addEventListener('mouseup', onMouseUp)
@@ -153,17 +153,17 @@ function setListeners() {
             onControlButtonClick(event, index)
         })
         slide.addEventListener('touchstart', function (event) {
-            onToushStart(event, index)
+            onTouchStart(event, index)
         })
         slide.addEventListener('touchend', onTouchEnd)
     })
     let resizeTimeOut;
-    window.addEventListener('resize', function(event) {
+    window.addEventListener('resize', function (event) {
         clearTimeout(resizeTimeOut)
-        resizeTimeOut = setTimeout(function() {
+        resizeTimeOut = setTimeout(function () {
             onResizeWindow()
-            }, 1000)
-    }) 
+        }, 1000)
+    })
 }
 
 function init() {
