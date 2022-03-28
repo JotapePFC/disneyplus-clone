@@ -38,9 +38,7 @@ const getLastSlideIndex = () => {
 }
 
 const animateTransition = (active) => {
-    const {
-        carouselList
-    } = collectionData[currentCollectionIndex]
+    const {carouselList} = collectionData[currentCollectionIndex]
     if (active) {
         carouselList.style.transition = 'transform .3s'
     } else {
@@ -48,20 +46,35 @@ const animateTransition = (active) => {
     }
 }
 
+const activeCurrentItems = () => {
+    const {carouselItems, state} = collectionData[currentCollectionIndex]
+    carouselItems.forEach((item, itemIndex) => {
+        item.classList.remove('active')
+        const firstItemIndex = state.currentSlideIndex * itemsPerSlide
+        if(itemIndex >= firstItemIndex && itemIndex < firstItemIndex + itemsPerSlide) {
+            item.classList.add('active')
+        }
+    })
+}
+
+const setArrowButtonsDisplay = () => {
+    const {btnPrevious, btnNext, state} = collectionData[currentCollectionIndex]
+    btnPrevious.style.display = state.currentSlideIndex === 0 ? 'none' : 'block'
+    btnNext.style.display = state.currentSlideIndex === getLastSlideIndex() ? 'none' : 'block'
+}
+
 const setVisibleSlide = (slideIndex) => {
-    const {
-        state
-    } = collectionData[currentCollectionIndex]
+    const {state} = collectionData[currentCollectionIndex]
     state.currentSlideIndex = slideIndex
     const centerPosition = getCenterPosition(slideIndex)
+    activeCurrentItems()
+    setArrowButtonsDisplay()
     animateTransition(true)
     translateSlide(centerPosition)
 }
 
 const backwardSlide = () => {
-    const {
-        state
-    } = collectionData[currentCollectionIndex]
+    const {state} = collectionData[currentCollectionIndex]
     if (state.currentSlideIndex > 0) {
         setVisibleSlide(state.currentSlideIndex - 1)
     } else {
@@ -70,9 +83,7 @@ const backwardSlide = () => {
 }
 
 const forwardSlide = () => {
-    const {
-        state
-    } = collectionData[currentCollectionIndex]
+    const {state} = collectionData[currentCollectionIndex]
     const lastSlideIndex = getLastSlideIndex()
     if (state.currentSlideIndex < lastSlideIndex) {
         setVisibleSlide(state.currentSlideIndex + 1)
@@ -82,9 +93,7 @@ const forwardSlide = () => {
 }
 
 const onMouseDown = (event, itemIndex) => {
-    const {
-        state
-    } = collectionData[currentCollectionIndex]
+    const {state} = collectionData[currentCollectionIndex]
     const item = event.currentTarget
     state.currentItemIndex = itemIndex
     state.mouseDownPosition = event.clientX
@@ -94,18 +103,14 @@ const onMouseDown = (event, itemIndex) => {
 }
 
 const onMouseMove = (event) => {
-    const {
-        state
-    } = collectionData[currentCollectionIndex]
+    const {state} = collectionData[currentCollectionIndex]
     state.movement = event.clientX - state.mouseDownPosition
     const position = event.clientX - state.currentSlidePosition
     translateSlide(position)
 }
 
 const onMouseUp = (event) => {
-    const {
-        state
-    } = collectionData[currentCollectionIndex]
+    const {state} = collectionData[currentCollectionIndex]
     if (state.movement > 150) {
         backwardSlide()
     } else if (state.movement < -150) {
@@ -113,6 +118,7 @@ const onMouseUp = (event) => {
     } else {
         setVisibleSlide(state.currentSlideIndex)
     }
+    state.movement = 0
     const item = event.currentTarget
     item.removeEventListener('mousemove', onMouseMove)
 }
