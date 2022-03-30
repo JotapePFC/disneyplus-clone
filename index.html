@@ -85,36 +85,11 @@
                     <div class="user-menu__background show-hover"></div>
                     <div class="user-menu__current-profile" data-open-usermenu>
                         <div class="user-profile user-profile--reverse">
-                            <img class="user-profile__avatar" src="./assets/imgs/avatar.png" alt="avatar" />
+                            <img class="user-profile__avatar" src="./assets/imgs/avatar.png" />
                             <span class="user-profile__title">Jotape</span>
                         </div>
-                    </div>
-                    <ul class="user-menu__profiles show-hover">
-                        <li class="user-menu__item">
-                            <div class="user-profile user-profile">
-                                <img class="user-profile__avatar" src="./assets/imgs/avatar.png" alt="avatar" />
-                                <span class="user-profile__title">Thaís</span>
-                            </div>
-                        </li>
-                        <li class="user-menu__item">
-                            <div class="user-profile user-profile">
-                                <img class="user-profile__avatar" src="./assets/imgs/avatar.png" alt="avatar" />
-                                <span class="user-profile__title">Mikka</span>
-                            </div>
-                        </li>
-                        <li class="user-menu__item">
-                            <div class="user-profile user-profile">
-                                <img class="user-profile__avatar" src="./assets/imgs/avatar.png" alt="avatar" />
-                                <span class="user-profile__title">JP</span>
-                            </div>
-                        </li>
-                        <li class="user-menu__item">
-                            <div class="user-profile user-profile">
-                                <img class="user-profile__avatar" src="./assets/imgs/avatar.png" alt="avatar" />
-                                <span class="user-profile__title">Jay-P</span>
-                            </div>
-                        </li>
-                    </ul>
+                    </div>    
+                    <ul class="user-menu__profiles show-hover" data-usermenu="user-profiles"></ul>
                     <ul class="user-menu__options show-hover">
                         <li class="user-menu__item">
                             <a class="user-menu__link" href="/">Editar Perfis</a>
@@ -142,464 +117,50 @@
             <section class="banners">
                 <button class="arrow-slider arrow-slider__left" data-banner="btn-previous"></button>
                 <button class="arrow-slider arrow-slider__right" data-banner="btn-next"></button>
-                <div class="controls-slider">
-                    <button class="controls-slider__item" data-banner="btn-control"></button>
-                    <button class="controls-slider__item" data-banner="btn-control"></button>
-                    <button class="controls-slider__item" data-banner="btn-control"></button>
-                    <button class="controls-slider__item" data-banner="btn-control"></button>
-                    <button class="controls-slider__item" data-banner="btn-control"></button>
-                    <button class="controls-slider__item" data-banner="btn-control"></button>
-                </div>
-                <div class="banner-slider" data-banner="slider">
-                    <div class="banner-slider__item" data-banner="item">
-                        <a href="/" class="banner-slider__link">
-                            <img class="banner-slider__cover" src="./assets/imgs/exemple/banner-exemple.jpeg"
-                                alt="Mandalorian" />
-                            <img class="banner-slider__title" src="./assets/imgs/exemple/banner-title-exemple.png"
-                                alt="Mandalorian" data-banner="img-title" />
-                        </a>
-                    </div>
-                    <div class="banner-slider__item" data-banner="item">
-                        <a href="/" class="banner-slider__link">
-                            <img class="banner-slider__cover" src="./assets/imgs/exemple/banner-exemple.jpeg"
-                                alt="Mandalorian" />
-                            <img class="banner-slider__title" src="./assets/imgs/exemple/banner-title-exemple.png"
-                                alt="Mandalorian" data-banner="img-title" />
-                        </a>
-                    </div>
-                    <div class="banner-slider__item" data-banner="item">
-                        <a href="/" class="banner-slider__link">
-                            <img class="banner-slider__cover" src="./assets/imgs/exemple/banner-exemple.jpeg"
-                                alt="Mandalorian" />
-                            <img class="banner-slider__title" src="./assets/imgs/exemple/banner-title-exemple.png"
-                                alt="Mandalorian" data-banner="img-title" />
-                        </a>
-                    </div>
-                    <div class="banner-slider__item" data-banner="item">
-                        <a href="/" class="banner-slider__link">
-                            <img class="banner-slider__cover" src="./assets/imgs/exemple/banner-exemple.jpeg"
-                                alt="Mandalorian" />
-                            <img class="banner-slider__title" src="./assets/imgs/exemple/banner-title-exemple.png"
-                                alt="Mandalorian" data-banner="img-title" />
-                        </a>
-                    </div>
-                    <div class="banner-slider__item" data-banner="item">
-                        <a href="/" class="banner-slider__link">
-                            <img class="banner-slider__cover" src="./assets/imgs/exemple/banner-exemple.jpeg"
-                                alt="Mandalorian" />
-                            <img class="banner-slider__title" src="./assets/imgs/exemple/banner-title-exemple.png"
-                                alt="Mandalorian" data-banner="img-title" />
-                        </a>
-                    </div>
-                    <div class="banner-slider__item" data-banner="item">
-                        <a href="/" class="banner-slider__link">
-                            <img class="banner-slider__cover" src="./assets/imgs/exemple/banner-exemple.jpeg"
-                                alt="Mandalorian" />
-                            <img class="banner-slider__title" src="./assets/imgs/exemple/banner-title-exemple.png"
-                                alt="Mandalorian" data-banner="img-title" />
-                        </a>
-                    </div>
-                </div>
+                <div class="controls-slider" data-banner="controls"></div>
+                <div class="banner-slider" data-banner="slider"></div>
             </section>
             <div class="categories">
                 <ul class="category-menu">
                     <li class="category-menu__item">
-                        <video class="category-menu__video" src="./assets/videos/category-disney.mp4" autoplay loop
-                            muted></video>
+                        <video class="category-menu__video" src="./assets/videos/category-disney.mp4" autoplay loop muted></video>
                         <a class="category-menu__link" href="/">
                             <img class="category-menu__img" src="./assets/imgs/categories/disney.png" alt="logo Disney">
                         </a>
                     </li>
                     <li class="category-menu__item">
-                        <video class="category-menu__video" src="./assets/videos/category-pixar.mp4" autoplay loop
-                            muted></video>
+                        <video class="category-menu__video" src="./assets/videos/category-pixar.mp4" autoplay loop muted></video>
                         <a class="category-menu__link" href="/">
                             <img class="category-menu__img" src="./assets/imgs/categories/pixar.png" alt="logo Pixar">
                         </a>
                     </li>
                     <li class="category-menu__item">
-                        <video class="category-menu__video" src="./assets/videos/category-marvel.mp4" autoplay loop
-                            muted></video>
+                        <video class="category-menu__video" src="./assets/videos/category-marvel.mp4" autoplay loop muted></video>
                         <a class="category-menu__link" href="/">
                             <img class="category-menu__img" src="./assets/imgs/categories/marvel.png" alt="logo Marvel">
                         </a>
                     </li>
                     <li class="category-menu__item">
-                        <video class="category-menu__video" src="./assets/videos/category-star-wars.mp4" autoplay loop
-                            muted></video>
+                        <video class="category-menu__video" src="./assets/videos/category-star-wars.mp4" autoplay loop muted></video>
                         <a class="category-menu__link" href="/">
                             <img class="category-menu__img" src="./assets/imgs/categories/star-wars.png"
                                 alt="logo Star Wars">
                         </a>
                     </li>
                     <li class="category-menu__item">
-                        <video class="category-menu__video" src="./assets/videos/category-national-geographic.mp4"
-                            autoplay loop muted></video>
+                        <video class="category-menu__video" src="./assets/videos/category-national-geographic.mp4" autoplay loop muted></video>
                         <a class="category-menu__link" href="/">
-                            <img class="category-menu__img" src="./assets/imgs/categories/national-geographic.png"
-                                alt="logo NatGeo">
+                            <img class="category-menu__img" src="./assets/imgs/categories/national-geographic.png" alt="logo NatGeo">
                         </a>
                     </li>
                 </ul>
             </div>
             </section>
-            <section class="collections">
-                <div class="collection" data-carousel="collection">
-                    <h3 class="collection__title">Recomendado para Você</h3>
-                    <div class="movie-carousel">
-                        <button class="arrow-slider arrow-slider__left" data-carousel="btn-previous"></button>
-                        <button class="arrow-slider arrow-slider__right" data-carousel="btn-next"></button>
-                        <ul class="movie-carousel__list" data-carousel="list">
-                            <li class="movie-carousel__item" data-carousel="item">
-                                <a class="movie-carousel__link" href="/">
-                                    <img class="movie-carousel__cover" src="./assets/imgs/exemple/movie-exemple.jpeg"
-                                        alt="Movie Cover" />
-                                </a>
-                            </li>
-                            <li class="movie-carousel__item" data-carousel="item">
-                                <a class="movie-carousel__link" href="/">
-                                    <img class="movie-carousel__cover" src="./assets/imgs/exemple/movie-exemple.jpeg"
-                                        alt="Movie Cover" />
-                                </a>
-                            </li>
-                            <li class="movie-carousel__item" data-carousel="item">
-                                <a class="movie-carousel__link" href="/">
-                                    <img class="movie-carousel__cover" src="./assets/imgs/exemple/movie-exemple.jpeg"
-                                        alt="Movie Cover" />
-                                </a>
-                            </li>
-                            <li class="movie-carousel__item" data-carousel="item">
-                                <a class="movie-carousel__link" href="/">
-                                    <img class="movie-carousel__cover" src="./assets/imgs/exemple/movie-exemple.jpeg"
-                                        alt="Movie Cover" />
-                                </a>
-                            </li>
-                            <li class="movie-carousel__item" data-carousel="item">
-                                <a class="movie-carousel__link" href="/">
-                                    <img class="movie-carousel__cover" src="./assets/imgs/exemple/movie-exemple.jpeg"
-                                        alt="Movie Cover" />
-                                </a>
-                            </li>
-                            <li class="movie-carousel__item" data-carousel="item">
-                                <a class="movie-carousel__link" href="/">
-                                    <img class="movie-carousel__cover" src="./assets/imgs/exemple/movie-exemple.jpeg"
-                                        alt="Movie Cover" />
-                                </a>
-                            </li>
-                            <li class="movie-carousel__item" data-carousel="item">
-                                <a class="movie-carousel__link" href="/">
-                                    <img class="movie-carousel__cover" src="./assets/imgs/exemple/movie-exemple.jpeg"
-                                        alt="Movie Cover" />
-                                </a>
-                            </li>
-                            <li class="movie-carousel__item" data-carousel="item">
-                                <a class="movie-carousel__link" href="/">
-                                    <img class="movie-carousel__cover" src="./assets/imgs/exemple/movie-exemple.jpeg"
-                                        alt="Movie Cover" />
-                                </a>
-                            </li>
-                            <li class="movie-carousel__item" data-carousel="item">
-                                <a class="movie-carousel__link" href="/">
-                                    <img class="movie-carousel__cover" src="./assets/imgs/exemple/movie-exemple.jpeg"
-                                        alt="Movie Cover" />
-                                </a>
-                            </li>
-                            <li class="movie-carousel__item" data-carousel="item">
-                                <a class="movie-carousel__link" href="/">
-                                    <img class="movie-carousel__cover" src="./assets/imgs/exemple/movie-exemple.jpeg"
-                                        alt="Movie Cover" />
-                                </a>
-                            </li>
-                            <li class="movie-carousel__item" data-carousel="item">
-                                <a class="movie-carousel__link" href="/">
-                                    <img class="movie-carousel__cover" src="./assets/imgs/exemple/movie-exemple.jpeg"
-                                        alt="Movie Cover" />
-                                </a>
-                            </li>
-                            <li class="movie-carousel__item" data-carousel="item">
-                                <a class="movie-carousel__link" href="/">
-                                    <img class="movie-carousel__cover" src="./assets/imgs/exemple/movie-exemple.jpeg"
-                                        alt="Movie Cover" />
-                                </a>
-                            </li>
-                            <li class="movie-carousel__item" data-carousel="item">
-                                <a class="movie-carousel__link" href="/">
-                                    <img class="movie-carousel__cover" src="./assets/imgs/exemple/movie-exemple.jpeg"
-                                        alt="Movie Cover" />
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="collection" data-carousel="collection">
-                    <h3 class="collection__title">Continue assistindo</h3>
-                    <div class="movie-carousel">
-                        <button class="arrow-slider arrow-slider__left" data-carousel="btn-previous"></button>
-                        <button class="arrow-slider arrow-slider__right" data-carousel="btn-next"></button>
-                        <ul class="movie-carousel__list" data-carousel="list">
-                            <li class="movie-carousel__item" data-carousel="item">
-                                <a class="movie-carousel__link" href="/">
-                                    <img class="movie-carousel__cover" src="./assets/imgs/exemple/movie-exemple.jpeg"
-                                        alt="Movie Cover" />
-                                </a>
-                            </li>
-                            <li class="movie-carousel__item" data-carousel="item">
-                                <a class="movie-carousel__link" href="/">
-                                    <img class="movie-carousel__cover" src="./assets/imgs/exemple/movie-exemple.jpeg"
-                                        alt="Movie Cover" />
-                                </a>
-                            </li>
-                            <li class="movie-carousel__item" data-carousel="item">
-                                <a class="movie-carousel__link" href="/">
-                                    <img class="movie-carousel__cover" src="./assets/imgs/exemple/movie-exemple.jpeg"
-                                        alt="Movie Cover" />
-                                </a>
-                            </li>
-                            <li class="movie-carousel__item" data-carousel="item">
-                                <a class="movie-carousel__link" href="/">
-                                    <img class="movie-carousel__cover" src="./assets/imgs/exemple/movie-exemple.jpeg"
-                                        alt="Movie Cover" />
-                                </a>
-                            </li>
-                            <li class="movie-carousel__item" data-carousel="item">
-                                <a class="movie-carousel__link" href="/">
-                                    <img class="movie-carousel__cover" src="./assets/imgs/exemple/movie-exemple.jpeg"
-                                        alt="Movie Cover" />
-                                </a>
-                            </li>
-                            <li class="movie-carousel__item" data-carousel="item">
-                                <a class="movie-carousel__link" href="/">
-                                    <img class="movie-carousel__cover" src="./assets/imgs/exemple/movie-exemple.jpeg"
-                                        alt="Movie Cover" />
-                                </a>
-                            </li>
-                            <li class="movie-carousel__item" data-carousel="item">
-                                <a class="movie-carousel__link" href="/">
-                                    <img class="movie-carousel__cover" src="./assets/imgs/exemple/movie-exemple.jpeg"
-                                        alt="Movie Cover" />
-                                </a>
-                            </li>
-                            <li class="movie-carousel__item" data-carousel="item">
-                                <a class="movie-carousel__link" href="/">
-                                    <img class="movie-carousel__cover" src="./assets/imgs/exemple/movie-exemple.jpeg"
-                                        alt="Movie Cover" />
-                                </a>
-                            </li>
-                            <li class="movie-carousel__item" data-carousel="item">
-                                <a class="movie-carousel__link" href="/">
-                                    <img class="movie-carousel__cover" src="./assets/imgs/exemple/movie-exemple.jpeg"
-                                        alt="Movie Cover" />
-                                </a>
-                            </li>
-                            <li class="movie-carousel__item" data-carousel="item">
-                                <a class="movie-carousel__link" href="/">
-                                    <img class="movie-carousel__cover" src="./assets/imgs/exemple/movie-exemple.jpeg"
-                                        alt="Movie Cover" />
-                                </a>
-                            </li>
-                            <li class="movie-carousel__item" data-carousel="item">
-                                <a class="movie-carousel__link" href="/">
-                                    <img class="movie-carousel__cover" src="./assets/imgs/exemple/movie-exemple.jpeg"
-                                        alt="Movie Cover" />
-                                </a>
-                            </li>
-                            <li class="movie-carousel__item" data-carousel="item">
-                                <a class="movie-carousel__link" href="/">
-                                    <img class="movie-carousel__cover" src="./assets/imgs/exemple/movie-exemple.jpeg"
-                                        alt="Movie Cover" />
-                                </a>
-                            </li>
-                            <li class="movie-carousel__item" data-carousel="item">
-                                <a class="movie-carousel__link" href="/">
-                                    <img class="movie-carousel__cover" src="./assets/imgs/exemple/movie-exemple.jpeg"
-                                        alt="Movie Cover" />
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="collection" data-carousel="collection">
-                    <h3 class="collection__title">Recomendado para Você</h3>
-                    <div class="movie-carousel">
-                        <button class="arrow-slider arrow-slider__left" data-carousel="btn-previous"></button>
-                        <button class="arrow-slider arrow-slider__right" data-carousel="btn-next"></button>
-                        <ul class="movie-carousel__list" data-carousel="list">
-                            <li class="movie-carousel__item" data-carousel="item">
-                                <a class="movie-carousel__link" href="/">
-                                    <img class="movie-carousel__cover" src="./assets/imgs/exemple/movie-exemple.jpeg"
-                                        alt="Movie Cover" />
-                                </a>
-                            </li>
-                            <li class="movie-carousel__item" data-carousel="item">
-                                <a class="movie-carousel__link" href="/">
-                                    <img class="movie-carousel__cover" src="./assets/imgs/exemple/movie-exemple.jpeg"
-                                        alt="Movie Cover" />
-                                </a>
-                            </li>
-                            <li class="movie-carousel__item" data-carousel="item">
-                                <a class="movie-carousel__link" href="/">
-                                    <img class="movie-carousel__cover" src="./assets/imgs/exemple/movie-exemple.jpeg"
-                                        alt="Movie Cover" />
-                                </a>
-                            </li>
-                            <li class="movie-carousel__item" data-carousel="item">
-                                <a class="movie-carousel__link" href="/">
-                                    <img class="movie-carousel__cover" src="./assets/imgs/exemple/movie-exemple.jpeg"
-                                        alt="Movie Cover" />
-                                </a>
-                            </li>
-                            <li class="movie-carousel__item" data-carousel="item">
-                                <a class="movie-carousel__link" href="/">
-                                    <img class="movie-carousel__cover" src="./assets/imgs/exemple/movie-exemple.jpeg"
-                                        alt="Movie Cover" />
-                                </a>
-                            </li>
-                            <li class="movie-carousel__item" data-carousel="item">
-                                <a class="movie-carousel__link" href="/">
-                                    <img class="movie-carousel__cover" src="./assets/imgs/exemple/movie-exemple.jpeg"
-                                        alt="Movie Cover" />
-                                </a>
-                            </li>
-                            <li class="movie-carousel__item" data-carousel="item">
-                                <a class="movie-carousel__link" href="/">
-                                    <img class="movie-carousel__cover" src="./assets/imgs/exemple/movie-exemple.jpeg"
-                                        alt="Movie Cover" />
-                                </a>
-                            </li>
-                            <li class="movie-carousel__item" data-carousel="item">
-                                <a class="movie-carousel__link" href="/">
-                                    <img class="movie-carousel__cover" src="./assets/imgs/exemple/movie-exemple.jpeg"
-                                        alt="Movie Cover" />
-                                </a>
-                            </li>
-                            <li class="movie-carousel__item" data-carousel="item">
-                                <a class="movie-carousel__link" href="/">
-                                    <img class="movie-carousel__cover" src="./assets/imgs/exemple/movie-exemple.jpeg"
-                                        alt="Movie Cover" />
-                                </a>
-                            </li>
-                            <li class="movie-carousel__item" data-carousel="item">
-                                <a class="movie-carousel__link" href="/">
-                                    <img class="movie-carousel__cover" src="./assets/imgs/exemple/movie-exemple.jpeg"
-                                        alt="Movie Cover" />
-                                </a>
-                            </li>
-                            <li class="movie-carousel__item" data-carousel="item">
-                                <a class="movie-carousel__link" href="/">
-                                    <img class="movie-carousel__cover" src="./assets/imgs/exemple/movie-exemple.jpeg"
-                                        alt="Movie Cover" />
-                                </a>
-                            </li>
-                            <li class="movie-carousel__item" data-carousel="item">
-                                <a class="movie-carousel__link" href="/">
-                                    <img class="movie-carousel__cover" src="./assets/imgs/exemple/movie-exemple.jpeg"
-                                        alt="Movie Cover" />
-                                </a>
-                            </li>
-                            <li class="movie-carousel__item" data-carousel="item">
-                                <a class="movie-carousel__link" href="/">
-                                    <img class="movie-carousel__cover" src="./assets/imgs/exemple/movie-exemple.jpeg"
-                                        alt="Movie Cover" />
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="collection" data-carousel="collection">
-                    <h3 class="collection__title">Recomendado para Você</h3>
-                    <div class="movie-carousel">
-                        <button class="arrow-slider arrow-slider__left" data-carousel="btn-previous"></button>
-                        <button class="arrow-slider arrow-slider__right" data-carousel="btn-next"></button>
-                        <ul class="movie-carousel__list" data-carousel="list">
-                            <li class="movie-carousel__item" data-carousel="item">
-                                <a class="movie-carousel__link" href="/">
-                                    <img class="movie-carousel__cover" src="./assets/imgs/exemple/movie-exemple.jpeg"
-                                        alt="Movie Cover" />
-                                </a>
-                            </li>
-                            <li class="movie-carousel__item" data-carousel="item">
-                                <a class="movie-carousel__link" href="/">
-                                    <img class="movie-carousel__cover" src="./assets/imgs/exemple/movie-exemple.jpeg"
-                                        alt="Movie Cover" />
-                                </a>
-                            </li>
-                            <li class="movie-carousel__item" data-carousel="item">
-                                <a class="movie-carousel__link" href="/">
-                                    <img class="movie-carousel__cover" src="./assets/imgs/exemple/movie-exemple.jpeg"
-                                        alt="Movie Cover" />
-                                </a>
-                            </li>
-                            <li class="movie-carousel__item" data-carousel="item">
-                                <a class="movie-carousel__link" href="/">
-                                    <img class="movie-carousel__cover" src="./assets/imgs/exemple/movie-exemple.jpeg"
-                                        alt="Movie Cover" />
-                                </a>
-                            </li>
-                            <li class="movie-carousel__item" data-carousel="item">
-                                <a class="movie-carousel__link" href="/">
-                                    <img class="movie-carousel__cover" src="./assets/imgs/exemple/movie-exemple.jpeg"
-                                        alt="Movie Cover" />
-                                </a>
-                            </li>
-                            <li class="movie-carousel__item" data-carousel="item">
-                                <a class="movie-carousel__link" href="/">
-                                    <img class="movie-carousel__cover" src="./assets/imgs/exemple/movie-exemple.jpeg"
-                                        alt="Movie Cover" />
-                                </a>
-                            </li>
-                            <li class="movie-carousel__item" data-carousel="item">
-                                <a class="movie-carousel__link" href="/">
-                                    <img class="movie-carousel__cover" src="./assets/imgs/exemple/movie-exemple.jpeg"
-                                        alt="Movie Cover" />
-                                </a>
-                            </li>
-                            <li class="movie-carousel__item" data-carousel="item">
-                                <a class="movie-carousel__link" href="/">
-                                    <img class="movie-carousel__cover" src="./assets/imgs/exemple/movie-exemple.jpeg"
-                                        alt="Movie Cover" />
-                                </a>
-                            </li>
-                            <li class="movie-carousel__item" data-carousel="item">
-                                <a class="movie-carousel__link" href="/">
-                                    <img class="movie-carousel__cover" src="./assets/imgs/exemple/movie-exemple.jpeg"
-                                        alt="Movie Cover" />
-                                </a>
-                            </li>
-                            <li class="movie-carousel__item" data-carousel="item">
-                                <a class="movie-carousel__link" href="/">
-                                    <img class="movie-carousel__cover" src="./assets/imgs/exemple/movie-exemple.jpeg"
-                                        alt="Movie Cover" />
-                                </a>
-                            </li>
-                            <li class="movie-carousel__item" data-carousel="item">
-                                <a class="movie-carousel__link" href="/">
-                                    <img class="movie-carousel__cover" src="./assets/imgs/exemple/movie-exemple.jpeg"
-                                        alt="Movie Cover" />
-                                </a>
-                            </li>
-                            <li class="movie-carousel__item" data-carousel="item">
-                                <a class="movie-carousel__link" href="/">
-                                    <img class="movie-carousel__cover" src="./assets/imgs/exemple/movie-exemple.jpeg"
-                                        alt="Movie Cover" />
-                                </a>
-                            </li>
-                            <li class="movie-carousel__item" data-carousel="item">
-                                <a class="movie-carousel__link" href="/">
-                                    <img class="movie-carousel__cover" src="./assets/imgs/exemple/movie-exemple.jpeg"
-                                        alt="Movie Cover" />
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
+            <section class="collections" data-carousel="collections"></section>
         </main>
     </div>
 
-    <script type="module" src="./assets/js/main.js"></script>
+    <script type="module" src="./assets/js/app.js"></script>
 </body>
 
 </html>
